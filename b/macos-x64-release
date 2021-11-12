@@ -1,0 +1,16 @@
+#!/bin/bash
+
+bin/gn gen out/macos/x64/Release --args='is_debug=false'
+
+echo ''
+echo 'To compile, use command:'
+echo 'ninja -C out/macos/x64/Release'
+
+echo ''
+echo 'To run HelloWorld, use command:'
+echo 'out/macos/x64/Release/HelloWorld'
+
+echo ''
+echo 'To run viewer, use command:'
+echo 'out/macos/x64/Release/viewer'
+echo ''
