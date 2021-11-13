@@ -1,0 +1,15 @@
+#!/bin/bash
+
+bin/gn gen out/android-arm-debug --args='ndk="'${ANDROID_NDK_ROOT}'" target_cpu="arm"'
+
+echo ''
+echo 'To compile, use command:'
+echo "ninja -C out/android-arm-debug"
+
+echo ''
+echo "To Create viewer App:"
+echo "b/android-arm-debug-app viewer"
+
+echo ''
+echo 'To deploy viewer, use command:'
+echo "adb install out/android-arm-debug/viewer.apk"

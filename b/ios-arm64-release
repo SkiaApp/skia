@@ -1,0 +1,12 @@
+#!/bin/bash
+
+bin/gn gen out/ios-arm64-release --args='is_debug=false target_os="ios" target_cpu="arm64" ios_min_target="13.0" skia_ios_identity=".*8GZNZMSYL9.*" skia_ios_profile="/Users/jimmy/keys/JimmyDev2021.mobileprovision"' --ide=xcode
+
+echo ''
+echo 'To compile, use command:'
+echo "ninja -C out/ios-arm64-release"
+
+echo ''
+echo 'To deploy viewer, use command:'
+echo "ios-deploy -b out/ios-arm64-release/viewer.app"
+echo ''

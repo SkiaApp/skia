@@ -1,0 +1,20 @@
+#!/bin/bash
+
+bin/gn gen out/ios-sim-release --args='is_debug=false target_os="ios" target_cpu="x64" ios_min_target = "13.0"' --ide=xcode
+
+echo ''
+echo 'To compile, use command:'
+echo "ninja -C out/ios-sim-release"
+
+echo ''
+echo 'To convert the Info.plist to binary plist'
+echo 'plutil -convert binary1 out/ios-sim-release/viewer.app/Info.plist'
+
+echo ''
+echo 'To deploy viewer, use command:'
+echo "ios-sim launch out/ios-sim-release/viewer.app -d iPhone-12-Pro"
+
+echo ''
+echo 'To list iOS simulator devices, use command:'
+echo "ios-sim showdevicetypes"
+echo ''

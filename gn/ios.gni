@@ -106,7 +106,7 @@ if (is_ios) {
   template("ios_app_bundle") {
     app_name = target_name
     gen_path = target_gen_dir
-    bundle_prefix = "com.google"
+    bundle_prefix = "com.jimmysoftware"
 
     action("${app_name}_generate_info_plist") {
       script = "//gn/gen_plist_ios.py"

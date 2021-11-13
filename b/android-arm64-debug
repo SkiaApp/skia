@@ -1,0 +1,15 @@
+#!/bin/bash
+
+bin/gn gen out/android-arm64-debug --args='ndk="'${ANDROID_NDK_ROOT}'" target_cpu="arm64"'
+
+echo ''
+echo 'To compile, use command:'
+echo "ninja -C out/android-arm64-debug"
+
+echo ''
+echo "To Create viewer App:"
+echo "b/android-arm64-debug-app viewer"
+
+echo ''
+echo 'To deploy viewer, use command:'
+echo "adb install out/android-arm64-debug/viewer.apk"
