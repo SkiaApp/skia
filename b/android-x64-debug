@@ -8,8 +8,8 @@ echo "ninja -C out/android-x64-debug"
 
 echo ''
 echo "To Create viewer App:"
-echo "b/android-x64-debug-app viewer"
+echo "b/android-build-app-debug viewer"
 
 echo ''
 echo 'To deploy viewer, use command:'
-echo "adb install out/android-x64-debug/viewer.apk"
+echo "adb install out/android-arm64-debug/viewer.apk"

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+bin/gn gen out/android-x86-release --args='is_debug=false ndk="'${ANDROID_NDK_ROOT}'" target_cpu="x86"'
+
+echo ''
+echo 'To compile, use command:'
+echo "ninja -C out/android-x86-release"
+
+echo ''
+echo "To Create viewer App:"
+echo "b/android-build-app-release viewer"
+
+echo ''
+echo 'To deploy viewer, use command:'
+echo "adb install out/android-arm64-release/viewer.apk"

@@ -7,9 +7,12 @@ echo 'To compile, use command:'
 echo "ninja -C out/android-arm64-debug"
 
 echo ''
-echo "To Create viewer App:"
-echo "b/android-arm64-debug-app viewer"
+echo "To Create Arm64 viewer App:"
+echo "b/android-build-arm64-app-debug viewer"
 
 echo ''
-echo 'To deploy viewer, use command:'
-echo "adb install out/android-arm64-debug/viewer.apk"
+echo "To Create Universal viewer App:"
+echo "b/android-build-universal-app-debug viewer"
+echo ''
+
+

@@ -8,8 +8,6 @@ echo "ninja -C out/android-arm-debug"
 
 echo ''
 echo "To Create viewer App:"
-echo "b/android-arm-debug-app viewer"
+echo "b/android-build-app-debug viewer"
 
-echo ''
-echo 'To deploy viewer, use command:'
-echo "adb install out/android-arm-debug/viewer.apk"
+

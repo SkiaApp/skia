@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+    echo ""
+    echo "Usage: android-build-app <appname>"
+    echo ""
+    exit
+fi
+
+echo ""
+echo "Copy resources to app assets directory"
+cp -a resources platform_tools/android/apps/$1/src/main/assets/
+
+echo ""
+echo "Copy Arm64 library"
+mkdir -p platform_tools/android/apps/$1/src/main/libs/arm64-v8a
+cp out/android-arm64-release/lib$1.so platform_tools/android/apps/$1/src/main/libs/arm64-v8a
+
+echo ""
+echo "Build Android Arm64 App"
+platform_tools/android/bin/android_build_app -C out/android-arm64-release $1
+
+echo ''
+echo "To deploy $1, use command:"
+echo "adb install out/android-arm64-release/$1.apk"
+echo ''

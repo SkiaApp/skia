@@ -30,4 +30,14 @@ cp out/android-x86-release/lib$1.so platform_tools/android/apps/$1/src/main/libs
 
 echo ""
 echo "Build Android App"
-platform_tools/android/bin/android_build_app -C out/android-arm64-release $1
+platform_tools/android/apps/gradlew --daemon -p platform_tools/android/apps/$1 -P suppressNativeBuild :$1:assembleUniversalRelease
+
+mkdir -p out/android-universal
+cp platform_tools/android/apps/$1/build/outputs/apk/universal/release/$1-universal-release.apk \
+    out/android-universal/$1-universal-release.apk
+ls -l out/android-universal/$1-universal-release.apk
+
+echo ''
+echo "To deploy $1, use command:"
+echo "adb install out/android-universal/$1-universal-release.apk"
+echo ''

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+bin/gn gen out/android-arm64-release --args='is_debug=false ndk="'${ANDROID_NDK_ROOT}'" target_cpu="arm64"'
+
+echo ''
+echo 'To compile, use command:'
+echo "ninja -C out/android-arm64-release"
+
+echo ''
+echo "To Create Arm64 viewer App:"
+echo "b/android-build-Arm64-app-release viewer"
+
+echo ''
+echo "To Create Universal viewer App:"
+echo "b/android-build-universal-app-release viewer"
+echo ''
+
+
