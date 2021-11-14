@@ -1,0 +1,16 @@
+#!/bin/bash
+
+bin/gn gen out/linux-x64-debug
+
+echo ''
+echo 'To compile, use command:'
+echo 'ninja -C out/linux-x64-debug'
+
+echo ''
+echo 'To run HelloWorld, use command:'
+echo 'out/linux-x64-debug/HelloWorld'
+
+echo ''
+echo 'To run viewer, use command:'
+echo 'out/linux-x64-debug/viewer'
+echo ''
