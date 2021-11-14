@@ -1,6 +1,6 @@
 #!/bin/bash
 
-bin/gn gen out/linux-x64-debug
+bin/gn gen out/linux-x64-debug --args='skia_use_gl=true target_os="linux" target_cpu="x64" cc="clang" cxx="clang++"'
 
 echo ''
 echo 'To compile, use command:'

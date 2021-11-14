@@ -1,0 +1,16 @@
+#!/bin/bash
+
+bin/gn gen out/linux-arm64-release --args='is_debug=false skia_use_gl=true target_os="linux" target_cpu="arm64" cc="clang" cxx="clang++"'
+
+echo ''
+echo 'To compile, use command:'
+echo 'ninja -C out/linux-arm64-release'
+
+echo ''
+echo 'To run HelloWorld, use command:'
+echo 'out/linux-arm64-release/HelloWorld'
+
+echo ''
+echo 'To run viewer, use command:'
+echo 'out/linux-arm64-release/viewer'
+echo ''
